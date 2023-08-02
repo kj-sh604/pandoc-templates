@@ -1,0 +1,54 @@
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}% too much in my eyes delete this
+                             % line and use the default ...
+
+\geometry{
+  left=2.5cm,
+  right=2.5cm,
+  top=2.5cm,
+  bottom=2.5cm,
+}
+
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+\doublespacing
+
+% Title page settings
+\AtBeginDocument{%
+  \begin{titlepage}
+    \centering
+    \vspace*{1cm} % Adjust the vertical spacing as needed
+
+    \Huge\textbf{Usability Test Plan}
+
+    \vspace{1.5cm} % Adjust the vertical spacing as needed
+
+    \Large\textbf{Aedriel Kyle Javier}
+
+    \vfill
+
+    \Large\textit{Specified Plan for performing a Usability Test for procrastiSlides.com}
+
+    \vfill
+
+    \large{Franklin University\\
+    23/SU-COMP-325-Q1WW\\
+    \today} % Use "\date{specific date}" if you want to set a specific date
+
+  \end{titlepage}
+}
